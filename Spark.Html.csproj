@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RenderH6Extension.cs" />
+    <Compile Include="RenderH5Extension.cs" />
     <Compile Include="HtmlAttribute.cs" />
     <Compile Include="HtmlTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
