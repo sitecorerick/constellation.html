@@ -19,7 +19,7 @@
 		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Welcome to .NET 4.0 FX Cop.")]
 		public static HtmlTag RenderH6(this HtmlTextWriter writer, string id = null, string cssClass = null)
 		{
-			return RenderTagExtension.RenderTag(writer, HtmlTextWriterTag.H5, id, cssClass);
+			return RenderTagExtension.RenderTag(writer, HtmlTextWriterTag.H6, id, cssClass);
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@
 		/// <returns>H4 HTML tag with attributes.</returns>
 		public static HtmlTag RenderH6(this HtmlTextWriter writer, params HtmlAttribute[] attributes)
 		{
-			return new HtmlTag(writer, HtmlTextWriterTag.H4, attributes);
+			return new HtmlTag(writer, HtmlTextWriterTag.H6, attributes);
 		}
 	}
 }

@@ -30,7 +30,7 @@
 		/// <returns>H4 HTML tag with attributes.</returns>
 		public static HtmlTag RenderH5(this HtmlTextWriter writer, params HtmlAttribute[] attributes)
 		{
-			return new HtmlTag(writer, HtmlTextWriterTag.H4, attributes);
+			return new HtmlTag(writer, HtmlTextWriterTag.H5, attributes);
 		}
 	}
 }
