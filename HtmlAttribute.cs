@@ -17,7 +17,7 @@
 		/// <param name="value">The value of the attribute.</param>
 		public HtmlAttribute(HtmlTextWriterAttribute attribute, string value)
 		{
-			this.Name = attribute.ToString();
+			this.Name = attribute.ToString().ToLower();
 			this.Value = value;
 		}
 
