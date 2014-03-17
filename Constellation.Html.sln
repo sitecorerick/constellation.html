@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spark.Html", "Spark.Html.csproj", "{C3E6A31F-081F-48B0-8B9E-9D8488938EB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.Html", "Constellation.Html.csproj", "{C3E6A31F-081F-48B0-8B9E-9D8488938EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

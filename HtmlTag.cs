@@ -1,4 +1,4 @@
-﻿namespace Spark.Html
+﻿namespace Constellation.Html
 {
 	using System;
 	using System.Collections.Generic;

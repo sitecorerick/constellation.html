@@ -10,14 +10,14 @@
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<summary>A .NET library to increase the utility and efficiency of HtmlTextWriter</summary>
 	<description>
-		Spark.Html contains a number of extension methods for HtmlTextWriter. Internally these methods use an IDisposable pattern to encapsulate the rather cumbersome code for adding attributes, rendering the begin tag, and rendering the end tag.
+		Constellation.Html contains a number of extension methods for HtmlTextWriter. Internally these methods use an IDisposable pattern to encapsulate the rather cumbersome code for adding attributes, rendering the begin tag, and rendering the end tag.
 		
 		The extension methods should generally be called as part of a "using" statement. ex: using (writer.RenderDiv()) { }
 		
 		The result is C# code for rendering HTML that is very easy to read, fully supports the ASP.NET browser capabilities feature, and is flexible enough to handle new tags invented in the future.
 	</description>
 	<releaseNotes>Formally released to GitHub</releaseNotes>
-	<copyright>Copyright 2013</copyright>
+	<copyright>Copyright 2014</copyright>
 	<tags>Sitecore</tags>
   </metadata>
 </package>
