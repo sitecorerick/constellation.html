@@ -69,7 +69,8 @@
     <Compile Include="RenderUlExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Constellation.Html.License.txt" />
+    <Content Include="Instructions\Constellation.Html.Instructions.txt" />
+    <Content Include="License\Constellation.Html.License.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Constellation.Html.nuspec" />
