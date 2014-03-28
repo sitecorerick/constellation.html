@@ -6,12 +6,14 @@ Databases/
 obj/
 [Bb]in/[Rr]elease*/
 _ReSharper*/
+/_Binaries
 
 #files
 *.[Dd]ebug.config
 Thumbs.db
 [Tt]est[Rr]esult*
 *.Web/[Ww]eb.[Cc]onfig
+*.nupkg
 
 
 #extensions
