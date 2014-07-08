@@ -4,19 +4,21 @@
 	<id>$id$</id>
 	<version>$version$</version>
 	<title>$title$</title>
-	<authors>Richard J. Cabral</authors>
+	<authors>Richard J. Cabral, Maziar Rezaei</authors>
 	<owners>Richard J. Cabral</owners>
 	<projectUrl>https://github.com/sitecorerick/constellation.html</projectUrl>
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<summary>A .NET library to increase the utility and efficiency of HtmlTextWriter</summary>
 	<description>
-		Constellation.Html contains a number of extension methods for HtmlTextWriter. Internally these methods use an IDisposable pattern to encapsulate the rather cumbersome code for adding attributes, rendering the begin tag, and rendering the end tag.
+		Constellation.Html contains two useful features: 
 		
+		1. A number of extension methods for HtmlTextWriter. - Internally these methods use an IDisposable pattern to encapsulate the rather cumbersome code for adding attributes, rendering the begin tag, and rendering the end tag.
 		The extension methods should generally be called as part of a "using" statement. ex: using (writer.RenderDiv()) { }
+		2. A dynamic wrapper for HtmlTextWriter that allows for very expressive and flexible HTML output writing within C#
 		
 		The result is C# code for rendering HTML that is very easy to read, fully supports the ASP.NET browser capabilities feature, and is flexible enough to handle new tags invented in the future.
 	</description>
-	<releaseNotes>Added data-ga tags to links, added title support to images</releaseNotes>
+	<releaseNotes>Added DynamicHtmlWriter</releaseNotes>
 	<copyright>Copyright 2014</copyright>
 	<tags>Sitecore</tags>
   </metadata>

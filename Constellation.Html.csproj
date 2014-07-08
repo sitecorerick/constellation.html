@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicHtmlWriter.cs" />
     <Compile Include="RenderSectionExtension.cs" />
     <Compile Include="RenderH6Extension.cs" />
     <Compile Include="RenderH5Extension.cs" />
