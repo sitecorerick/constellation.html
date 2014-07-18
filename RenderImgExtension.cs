@@ -51,11 +51,24 @@
 		/// <summary>
 		/// Converts a series of strings to an array of HtmlAttributes.
 		/// </summary>
-		/// <param name="src">A src string.</param>
-		/// <param name="alt">An alt string.</param>
-		/// <param name="id">A CSS ID string.</param>
-		/// <param name="cssClass">A CSS Class string.</param>
-		/// <returns>An array of HtmlAttributes. The Array may be empty.</returns>
+		/// <param name="src">
+		/// A src string.
+		/// </param>
+		/// <param name="alt">
+		/// An alt string.
+		/// </param>
+		/// <param name="title">
+		/// The title.
+		/// </param>
+		/// <param name="id">
+		/// A CSS ID string.
+		/// </param>
+		/// <param name="cssClass">
+		/// A CSS Class string.
+		/// </param>
+		/// <returns>
+		/// An array of HtmlAttributes. The Array may be empty.
+		/// </returns>
 		private static HtmlAttribute[] ToAttributes(string src, string alt, string title, string id, string cssClass)
 		{
 			var attributes = new List<HtmlAttribute>();

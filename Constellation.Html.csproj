@@ -36,6 +36,23 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RenderSmallExtension.cs" />
+    <Compile Include="RenderWbrExtension.cs" />
+    <Compile Include="RenderTimeExtension.cs" />
+    <Compile Include="RenderSummaryExtension.cs" />
+    <Compile Include="RenderProgressExtension.cs" />
+    <Compile Include="RenderMenuExtension.cs" />
+    <Compile Include="RenderMeterExtension.cs" />
+    <Compile Include="RenderMenuItemExtension.cs" />
+    <Compile Include="RenderMarkExtension.cs" />
+    <Compile Include="RenderMainExtension.cs" />
+    <Compile Include="RenderDialogExtension.cs" />
+    <Compile Include="RenderDetailsExtension.cs" />
+    <Compile Include="RenderBdiExtension.cs" />
+    <Compile Include="RenderHeaderExtension.cs" />
+    <Compile Include="RenderFooterExtension.cs" />
+    <Compile Include="RenderAsideExtension.cs" />
+    <Compile Include="RenderArticleExtension.cs" />
     <Compile Include="DynamicHtmlWriter.cs" />
     <Compile Include="RenderSectionExtension.cs" />
     <Compile Include="RenderH6Extension.cs" />
