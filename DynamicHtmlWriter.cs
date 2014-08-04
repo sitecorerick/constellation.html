@@ -66,7 +66,7 @@
 
 			// All string.Concat does is to do a null check on the arg.
 			var attributes = binder.CallInfo.ArgumentNames
-									.Select((it, i) => new HtmlAttribute(it.Replace('_', '-'), string.Concat(args[i]))).ToArray();
+								.Select((it, i) => new HtmlAttribute(RewriteAttributeName(it), string.Concat(args[i]))).ToArray();
 
 			if (Array.IndexOf(SelfClosingTags, methodName) == -1)
 			{
@@ -208,6 +208,53 @@
 		public void WriteEncodedText(string text)
 		{
 			this.writer.WriteEncodedText(text);
+		}
+
+		/// <summary>
+		/// Rewrites the name of the attribute.
+		/// </summary>
+		/// <param name="input">The input.</param>
+		/// <returns>The attribute name</returns>
+		private static string RewriteAttributeName(string input)
+		{
+			var builder = new StringBuilder(input.Length);
+			for (var i = 0; i < input.Length; i++)
+			{
+				char current = input[i];
+
+				if ('@'.Equals(current))
+				{
+					continue;
+				}
+
+				if ('_'.Equals(current))
+				{
+					// if last character, append and continue
+					if (i == input.Length - 1)
+					{
+						builder.Append(current);
+						continue;
+					}
+
+					// check for escape character and skip if it was an escaped underscore
+					if ('_'.Equals(input[i + 1]))
+					{
+						builder.Append(current);
+						i++;
+					}
+					else
+					{
+						// convert underscore to dash
+						builder.Append('-');
+					}
+				}
+				else
+				{
+					builder.Append(current);
+				}
+			}
+
+			return builder.ToString();
 		}
 	}
 }
