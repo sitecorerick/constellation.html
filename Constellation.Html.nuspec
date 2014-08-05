@@ -4,7 +4,7 @@
 	<id>$id$</id>
 	<version>$version$</version>
 	<title>$title$</title>
-	<authors>Richard J. Cabral, Maziar Rezaei</authors>
+	<authors>Richard J. Cabral, Maziar Rezaei, Matthew Gramolini</authors>
 	<owners>Richard J. Cabral</owners>
 	<projectUrl>https://github.com/sitecorerick/constellation.html</projectUrl>
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,7 @@
 		
 		The result is C# code for rendering HTML that is very easy to read, fully supports the ASP.NET browser capabilities feature, and is flexible enough to handle new tags invented in the future.
 	</description>
-	<releaseNotes>Added support for a number of less prevalent HTML5 tags.</releaseNotes>
+	<releaseNotes>Installed basic support for remembering tab stops and inserting newlines between some tags. Updated dynamic writer to support "class" attributes and underscores.</releaseNotes>
 	<copyright>Copyright 2014</copyright>
 	<tags>Sitecore</tags>
   </metadata>
