@@ -22,7 +22,34 @@
 		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Welcome to .NET 4.0 FX Cop.")]
 		public static HtmlTag RenderTag(this HtmlTextWriter writer, HtmlTextWriterTag tag, string id = null, string cssClass = null)
 		{
-			return RenderTag(writer, tag, ToAttributes(id, cssClass));
+			return RenderTag(writer, tag, HtmlTag.TagStyle.Inline, ToAttributes(id, cssClass));
+		}
+
+		/// <summary>
+		/// Creates an HTML tag and adds the provided ID and CSS Class to the tag.
+		/// </summary>
+		/// <param name="writer">
+		/// The HTMLTextWriter.
+		/// </param>
+		/// <param name="tag">
+		/// The type of HTML tag.
+		/// </param>
+		/// <param name="tagStyle">
+		/// The tag Style.
+		/// </param>
+		/// <param name="id">
+		/// The CSS ID of the HTML tag.
+		/// </param>
+		/// <param name="cssClass">
+		/// The CSS Class of the HTML tag.
+		/// </param>
+		/// <returns>
+		/// HTML tag with id and class attributes.
+		/// </returns>
+		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Welcome to .NET 4.0 FX Cop.")]
+		public static HtmlTag RenderTag(this HtmlTextWriter writer, HtmlTextWriterTag tag, HtmlTag.TagStyle tagStyle, string id = null, string cssClass = null)
+		{
+			return RenderTag(writer, tag, tagStyle, ToAttributes(id, cssClass));
 		}
 
 		/// <summary>
@@ -34,7 +61,30 @@
 		/// <returns>HTML tag with attributes.</returns>
 		public static HtmlTag RenderTag(this HtmlTextWriter writer, HtmlTextWriterTag tag, params HtmlAttribute[] attributes)
 		{
-			return new HtmlTag(writer, tag, attributes);
+			return RenderTag(writer, tag, HtmlTag.TagStyle.Inline, attributes);
+		}
+
+		/// <summary>
+		/// Creates an HTML tag and adds any provided attributes to the tag.
+		/// </summary>
+		/// <param name="writer">
+		/// The HTMLTextWriter.
+		/// </param>
+		/// <param name="tag">
+		/// The type of HTML tag.
+		/// </param>
+		/// <param name="tagStyle">
+		/// The tag Style.
+		/// </param>
+		/// <param name="attributes">
+		/// HTML attributes.
+		/// </param>
+		/// <returns>
+		/// HTML tag with attributes.
+		/// </returns>
+		public static HtmlTag RenderTag(this HtmlTextWriter writer, HtmlTextWriterTag tag, HtmlTag.TagStyle tagStyle, params HtmlAttribute[] attributes)
+		{
+			return new HtmlTag(writer, tag, tagStyle, attributes);
 		}
 		#endregion
 
@@ -111,7 +161,7 @@
 		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Welcome to .NET 4.0 FX Cop.")]
 		public static HtmlTag RenderTag(this HtmlTextWriter writer, string tag, string id = null, string cssClass = null)
 		{
-			return RenderTag(writer, tag, ToAttributes(id, cssClass));
+			return RenderTag(writer, tag, HtmlTag.TagStyle.Inline, ToAttributes(id, cssClass));
 		}
 
 		/// <summary>
@@ -123,7 +173,57 @@
 		/// <returns>HTML tag with attributes.</returns>
 		public static HtmlTag RenderTag(this HtmlTextWriter writer, string tag, params HtmlAttribute[] attributes)
 		{
-			return new HtmlTag(writer, tag, attributes);
+			return RenderTag(writer, tag, HtmlTag.TagStyle.Inline, attributes);
+		}
+
+		/// <summary>
+		/// Creates an HTML tag and adds the provided ID and CSS Class to the tag.
+		/// </summary>
+		/// <param name="writer">
+		/// The HTMLTextWriter.
+		/// </param>
+		/// <param name="tag">
+		/// The type of HTML tag.
+		/// </param>
+		/// <param name="tagStyle">
+		/// The tag Style.
+		/// </param>
+		/// <param name="id">
+		/// The CSS ID of the HTML tag.
+		/// </param>
+		/// <param name="cssClass">
+		/// The CSS Class of the HTML tag.
+		/// </param>
+		/// <returns>
+		/// HTML tag with id and class attributes.
+		/// </returns>
+		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Welcome to .NET 4.0 FX Cop.")]
+		public static HtmlTag RenderTag(this HtmlTextWriter writer, string tag, HtmlTag.TagStyle tagStyle, string id = null, string cssClass = null)
+		{
+			return RenderTag(writer, tag, tagStyle, ToAttributes(id, cssClass));
+		}
+
+		/// <summary>
+		/// Creates an HTML tag and adds any provided attributes to the tag.
+		/// </summary>
+		/// <param name="writer">
+		/// The HTMLTextWriter.
+		/// </param>
+		/// <param name="tag">
+		/// The type of HTML tag.
+		/// </param>
+		/// <param name="tagStyle">
+		/// The tag Style.
+		/// </param>
+		/// <param name="attributes">
+		/// HTML attributes.
+		/// </param>
+		/// <returns>
+		/// HTML tag with attributes.
+		/// </returns>
+		public static HtmlTag RenderTag(this HtmlTextWriter writer, string tag, HtmlTag.TagStyle tagStyle, params HtmlAttribute[] attributes)
+		{
+			return new HtmlTag(writer, tag, tagStyle, attributes);
 		}
 		#endregion
 
