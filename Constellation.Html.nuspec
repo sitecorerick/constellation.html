@@ -18,7 +18,7 @@
 		
 		The result is C# code for rendering HTML that is very easy to read, fully supports the ASP.NET browser capabilities feature, and is flexible enough to handle new tags invented in the future.
 	</description>
-	<releaseNotes>Installed basic support for remembering tab stops and inserting newlines between some tags. Updated dynamic writer to support "class" attributes and underscores.</releaseNotes>
+	<releaseNotes>Updated development to VS2013.</releaseNotes>
 	<copyright>Copyright 2014</copyright>
 	<tags>Sitecore</tags>
   </metadata>
